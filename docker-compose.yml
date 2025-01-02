@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: "host.docker.internal" # Utilise l'adresse de la machine hôte
+      DB_USER: "api_user"
+      DB_PASSWORD: "password123"
+      DB_NAME: "api_db"
